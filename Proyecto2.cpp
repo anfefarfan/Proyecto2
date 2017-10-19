@@ -184,7 +184,6 @@ void menu(){
 		printf("|**************************************************************|\n");
 		printf("| 1.Gestionar Pila                                             |\n");
 		printf("| 2.Gestionar Cola                                             |\n");
-		printf("| 3.Gestionar Archivos                                         |\n");
 		printf("|                                                              |\n");
 		printf("| 0.Salir                                                      |\n");
 		printf("|**************************************************************|\n");
@@ -391,14 +390,6 @@ void menu(){
 			break;
 		} 
 		
-		
-		case 3: {
-				printf("------------------------------------\n");
-				break;
-			}
-		
-		
-	
 		case 0: exit(0);
 		break;
 		default: printf("\nNo es una opcion valida, intentelo de nuevo\n");
@@ -841,10 +832,11 @@ void visualizar_archivos(){
 	fclose(proyecto);
 }
 
+
 void ordenar_datos_burbuja_pila(nodo *pila){
-	int aux,y;
+	int aux;
 	nodo * x = pila;
-	
+	nodo *y;
 	if(pila == NULL){
 		printf("solo un dato\n");
 	}else{
